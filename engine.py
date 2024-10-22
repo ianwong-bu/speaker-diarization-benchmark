@@ -10,7 +10,6 @@ from typing import *
 import boto3
 import pvfalcon
 import requests
-import swagger_client
 import torch
 from azure.storage.blob import BlobServiceClient, ResourceTypes, AccountSasPermissions, generate_account_sas
 from google.cloud import speech
