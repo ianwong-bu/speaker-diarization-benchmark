@@ -11,7 +11,6 @@ import boto3
 import pvfalcon
 import requests
 import torch
-from azure.storage.blob import BlobServiceClient, ResourceTypes, AccountSasPermissions, generate_account_sas
 from google.cloud import speech
 from google.cloud import storage
 from google.protobuf.json_format import MessageToDict
@@ -52,7 +51,6 @@ class Engine:
         try:
             subclass = {
                 Engines.AWS_TRANSCRIBE: AWSTranscribeEngine,
-                Engines.AZURE_SPEECH_TO_TEXT: AzureSpeechToTextEngine,
                 Engines.GOOGLE_SPEECH_TO_TEXT: GoogleSpeechToTextEngine,
                 Engines.GOOGLE_SPEECH_TO_TEXT_ENHANCED: GoogleSpeechToTextEnhancedEngine,
                 Engines.PICOVOICE_FALCON: PicovoiceFalconEngine,
